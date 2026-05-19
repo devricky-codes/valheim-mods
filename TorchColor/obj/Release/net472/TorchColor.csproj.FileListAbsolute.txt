@@ -7,3 +7,4 @@ F:\Projects\CustomValheim\TorchColor\bin\Release\net472\ValheimTorchColor.dll
 F:\Projects\CustomValheim\TorchColor\bin\Release\net472\ValheimTorchColor.pdb
 F:\Projects\CustomValheim\TorchColor\obj\Release\net472\ValheimTorchColor.dll
 F:\Projects\CustomValheim\TorchColor\obj\Release\net472\ValheimTorchColor.pdb
+F:\Projects\CustomValheim\TorchColor\obj\Release\net472\TorchColor.sourcelink.json
