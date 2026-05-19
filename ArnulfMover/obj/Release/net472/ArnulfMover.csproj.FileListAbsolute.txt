@@ -1,0 +1,11 @@
+F:\Projects\CustomValheim\ArnulfMover\obj\Release\net472\ArnulfMover.csproj.AssemblyReference.cache
+F:\Projects\CustomValheim\ArnulfMover\obj\Release\net472\ArnulfMover.GeneratedMSBuildEditorConfig.editorconfig
+F:\Projects\CustomValheim\ArnulfMover\obj\Release\net472\ArnulfMover.AssemblyInfoInputs.cache
+F:\Projects\CustomValheim\ArnulfMover\obj\Release\net472\ArnulfMover.AssemblyInfo.cs
+F:\Projects\CustomValheim\ArnulfMover\obj\Release\net472\ArnulfMover.csproj.CoreCompileInputs.cache
+F:\Projects\CustomValheim\ArnulfMover\bin\Release\net472\ValheimArnulfMover.dll
+F:\Projects\CustomValheim\ArnulfMover\bin\Release\net472\ValheimArnulfMover.pdb
+F:\Projects\CustomValheim\ArnulfMover\obj\Release\net472\ValheimArnulfMover.dll
+F:\Projects\CustomValheim\ArnulfMover\obj\Release\net472\ValheimArnulfMover.pdb
+F:\Projects\CustomValheim\ArnulfMover\bin\Release\net472\Newtonsoft.Json.dll
+F:\Projects\CustomValheim\ArnulfMover\obj\Release\net472\ArnulfMo.B1E8523F.Up2Date

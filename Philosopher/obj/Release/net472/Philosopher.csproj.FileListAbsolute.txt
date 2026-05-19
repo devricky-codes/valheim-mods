@@ -1,0 +1,11 @@
+F:\Projects\CustomValheim\Philosopher\obj\Release\net472\Philosopher.csproj.AssemblyReference.cache
+F:\Projects\CustomValheim\Philosopher\obj\Release\net472\Philosopher.GeneratedMSBuildEditorConfig.editorconfig
+F:\Projects\CustomValheim\Philosopher\obj\Release\net472\Philosopher.AssemblyInfoInputs.cache
+F:\Projects\CustomValheim\Philosopher\obj\Release\net472\Philosopher.AssemblyInfo.cs
+F:\Projects\CustomValheim\Philosopher\obj\Release\net472\Philosopher.csproj.CoreCompileInputs.cache
+F:\Projects\CustomValheim\Philosopher\bin\Release\net472\ValheimPhilosopher.dll
+F:\Projects\CustomValheim\Philosopher\bin\Release\net472\ValheimPhilosopher.pdb
+F:\Projects\CustomValheim\Philosopher\bin\Release\net472\Newtonsoft.Json.dll
+F:\Projects\CustomValheim\Philosopher\obj\Release\net472\Philosop.95D3830F.Up2Date
+F:\Projects\CustomValheim\Philosopher\obj\Release\net472\ValheimPhilosopher.dll
+F:\Projects\CustomValheim\Philosopher\obj\Release\net472\ValheimPhilosopher.pdb

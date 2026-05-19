@@ -1,0 +1,9 @@
+F:\Projects\CustomValheim\TorchColor\obj\Release\net472\TorchColor.csproj.AssemblyReference.cache
+F:\Projects\CustomValheim\TorchColor\obj\Release\net472\TorchColor.GeneratedMSBuildEditorConfig.editorconfig
+F:\Projects\CustomValheim\TorchColor\obj\Release\net472\TorchColor.AssemblyInfoInputs.cache
+F:\Projects\CustomValheim\TorchColor\obj\Release\net472\TorchColor.AssemblyInfo.cs
+F:\Projects\CustomValheim\TorchColor\obj\Release\net472\TorchColor.csproj.CoreCompileInputs.cache
+F:\Projects\CustomValheim\TorchColor\bin\Release\net472\ValheimTorchColor.dll
+F:\Projects\CustomValheim\TorchColor\bin\Release\net472\ValheimTorchColor.pdb
+F:\Projects\CustomValheim\TorchColor\obj\Release\net472\ValheimTorchColor.dll
+F:\Projects\CustomValheim\TorchColor\obj\Release\net472\ValheimTorchColor.pdb
