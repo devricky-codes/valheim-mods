@@ -1203,6 +1203,7 @@ namespace ValheimTorchColor
 
             var hoverObj = player.GetHoverObject();
             var hoverNview = hoverObj != null ? hoverObj.GetComponentInParent<ZNetView>() : null;
+            bool hoverIsLight = IsLikelyLightSource(hoverNview);
 
             var cam = GameCamera.instance != null
                 ? (Camera)typeof(GameCamera)
@@ -1211,18 +1212,63 @@ namespace ValheimTorchColor
                 : Camera.main;
 
             string hitName = "nothing";
+            float hitDist = -1f;
             ZNetView rayNview = null;
-            if (cam != null && Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hit, 10f))
+            if (cam != null)
             {
-                hitName = hit.collider.gameObject.name;
-                rayNview = hit.collider.GetComponentInParent<ZNetView>();
+                var hits = Physics.RaycastAll(
+                    cam.transform.position,
+                    cam.transform.forward,
+                    10f,
+                    ~0,
+                    QueryTriggerInteraction.Ignore);
+
+                System.Array.Sort(hits, (a, b) => a.distance.CompareTo(b.distance));
+
+                foreach (var hit in hits)
+                {
+                    if (hit.collider == null) continue;
+
+                    // Keep the nearest physical hit for debug context.
+                    if (hitName == "nothing")
+                    {
+                        hitName = hit.collider.gameObject.name;
+                        hitDist = hit.distance;
+                    }
+
+                    var nview = hit.collider.GetComponentInParent<ZNetView>();
+                    if (!IsLikelyLightSource(nview)) continue;
+
+                    rayNview = nview;
+                    hitName = hit.collider.gameObject.name;
+                    hitDist = hit.distance;
+                    break;
+                }
             }
 
-            bool hoverIsLight = IsLikelyLightSource(hoverNview);
             bool rayIsLight = IsLikelyLightSource(rayNview);
 
             ZNetView selected = null;
-            if (rayIsLight)
+            if (rayIsLight && hoverIsLight && rayNview != hoverNview)
+            {
+                var viewOrigin = cam != null ? cam.transform.position : player.transform.position;
+                var viewForward = cam != null ? cam.transform.forward : player.transform.forward;
+
+                float rayAngle = Vector3.Angle(viewForward, (rayNview.transform.position - viewOrigin).normalized);
+                float hoverAngle = Vector3.Angle(viewForward, (hoverNview.transform.position - viewOrigin).normalized);
+
+                if (hoverAngle <= rayAngle + 1f)
+                {
+                    selected = hoverNview;
+                    source = "hover-preferred";
+                }
+                else
+                {
+                    selected = rayNview;
+                    source = "raycast-preferred";
+                }
+            }
+            else if (rayIsLight)
             {
                 selected = rayNview;
                 source = "raycast";
@@ -1243,7 +1289,7 @@ namespace ValheimTorchColor
                 source = "hover-nonlight";
             }
 
-            context = $"hoverObj='{hoverObj?.name ?? "none"}' hoverNView={DescribeTarget(hoverNview)} raycast='{hitName}' rayNView={DescribeTarget(rayNview)}";
+            context = $"hoverObj='{hoverObj?.name ?? "none"}' hoverNView={DescribeTarget(hoverNview)} raycast='{hitName}' rayDist={hitDist:F2} rayNView={DescribeTarget(rayNview)} chosen={DescribeTarget(selected)}";
             return selected;
         }
 

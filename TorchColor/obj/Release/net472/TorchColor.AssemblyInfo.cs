@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ValheimTorchColor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1d0d58a9ca531cec62a830b92c0b704f4ccc6672")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0969e5dd3b99b5c9537adbeda3566462a99f1d79")]
 [assembly: System.Reflection.AssemblyProductAttribute("ValheimTorchColor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ValheimTorchColor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
